@@ -103,3 +103,19 @@ npm run build
 
 New users receive the Employee role unless an authorized administrator assigns
 another role.
+
+## Authentication API
+
+| Method | Endpoint | Purpose |
+| --- | --- | --- |
+| `POST` | `/api/auth/register/` | Register an Employee account |
+| `POST` | `/api/auth/login/` | Log in with email and password |
+| `POST` | `/api/auth/refresh/` | Rotate a refresh token |
+| `POST` | `/api/auth/logout/` | Invalidate a refresh token |
+| `GET` | `/api/auth/me/` | Return the authenticated user |
+
+Send access tokens on protected requests using the HTTP header:
+
+```text
+Authorization: Bearer <access-token>
+```
