@@ -1,7 +1,7 @@
 # Employee Management System
 
 A learning-focused full-stack application built with React, TypeScript, Django,
-and Django REST Framework.
+PostgreSQL, and Django REST Framework.
 
 ## Project structure
 
@@ -15,6 +15,27 @@ newpro/
 └── frontend/            React and TypeScript user interface
     ├── src/             React source code
     └── vite.config.ts   Development server configuration
+```
+
+## First-time database setup
+
+The project runs PostgreSQL in Docker so local development uses the same
+database engine as production.
+
+```bash
+cd /Users/arnoldshaju/Desktop/newpro
+cp .env.example .env
+# Edit .env and set a private development password.
+docker compose up -d database
+```
+
+Wait until `docker compose ps` reports that the database is healthy, then run
+the Django migrations:
+
+```bash
+cd backend
+source .venv/bin/activate
+python manage.py migrate
 ```
 
 ## Run the project
@@ -40,6 +61,15 @@ npm run dev
 ```
 
 Open <http://localhost:5173> in a browser.
+
+Stop PostgreSQL without deleting its stored data:
+
+```bash
+docker compose stop database
+```
+
+The `.env` file and PostgreSQL data are deliberately excluded from Git. Commit
+`.env.example`, but never commit the real `.env` file.
 
 ## Useful checks
 
