@@ -48,10 +48,11 @@ Open two terminal windows.
 cd /Users/arnoldshaju/Desktop/newpro/backend
 source .venv/bin/activate
 python manage.py migrate
-python manage.py runserver
+python manage.py runserver 8001
 ```
 
-The API is available at <http://127.0.0.1:8000/api/health/>.
+The API is available at <http://127.0.0.1:8001/api/health/>. Port 8001 avoids
+conflicting with other local projects that commonly use Django's default 8000.
 
 ### Terminal 2: React frontend
 
