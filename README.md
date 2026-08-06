@@ -56,10 +56,20 @@ npm run build
 
 ## Planned modules
 
-1. Custom users and roles: Admin, HR, Manager, Employee
-2. Departments and employee profiles
-3. Authentication and protected React pages
+1. ✅ Custom users and roles: Admin, HR, Manager, Employee
+2. Authentication and protected React pages
+3. Departments and employee profiles
 4. Leave requests and approvals
 5. Attendance
 6. Notifications and document uploads
 7. Reporting and deployment
+
+## Current user roles
+
+- **Admin:** system-wide administration
+- **HR:** employee and people-operation management
+- **Manager:** team-level management and approvals
+- **Employee:** personal profile and employee self-service
+
+New users receive the Employee role unless an authorized administrator assigns
+another role.
