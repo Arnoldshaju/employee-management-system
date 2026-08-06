@@ -1,0 +1,178 @@
+.app-shell {
+  min-height: 100vh;
+  padding: 0 6vw;
+}
+
+.topbar {
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  padding: 1.5rem 0;
+}
+
+.brand {
+  align-items: center;
+  color: #15211b;
+  display: flex;
+  font-size: 1.05rem;
+  font-weight: 750;
+  gap: 0.7rem;
+  text-decoration: none;
+}
+
+.brand-mark {
+  align-items: center;
+  background: #276749;
+  border-radius: 0.65rem;
+  color: white;
+  display: inline-flex;
+  height: 2.25rem;
+  justify-content: center;
+  width: 2.25rem;
+}
+
+.phase-label {
+  color: #647168;
+  font-size: 0.85rem;
+  font-weight: 650;
+}
+
+.hero {
+  align-items: center;
+  display: grid;
+  gap: clamp(3rem, 8vw, 8rem);
+  grid-template-columns: minmax(0, 1.15fr) minmax(18rem, 0.85fr);
+  min-height: calc(100vh - 6rem);
+  padding: 3rem 0 6rem;
+}
+
+.eyebrow,
+.card-kicker {
+  color: #2f7d59;
+  font-size: 0.76rem;
+  font-weight: 800;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+}
+
+h1 {
+  color: #14221a;
+  font-size: clamp(2.9rem, 6vw, 5.8rem);
+  letter-spacing: -0.06em;
+  line-height: 0.98;
+  margin: 1rem 0 1.5rem;
+  max-width: 12ch;
+}
+
+.hero-description {
+  color: #647168;
+  font-size: clamp(1rem, 1.5vw, 1.16rem);
+  line-height: 1.7;
+  max-width: 37rem;
+}
+
+.status-card {
+  align-items: flex-start;
+  background: rgba(255, 255, 255, 0.78);
+  border: 1px solid #d9e3dc;
+  border-radius: 1rem;
+  display: flex;
+  gap: 0.9rem;
+  margin-top: 2.25rem;
+  max-width: 31rem;
+  padding: 1rem 1.15rem;
+}
+
+.status-card strong {
+  color: #203128;
+  display: block;
+  margin-bottom: 0.2rem;
+}
+
+.status-card p {
+  color: #748078;
+  font-size: 0.86rem;
+  margin: 0;
+}
+
+.status-dot {
+  background: #d49a2a;
+  border-radius: 50%;
+  box-shadow: 0 0 0 5px rgba(212, 154, 42, 0.13);
+  flex: 0 0 auto;
+  height: 0.58rem;
+  margin-top: 0.4rem;
+  width: 0.58rem;
+}
+
+.status-connected .status-dot {
+  background: #2f9e66;
+  box-shadow: 0 0 0 5px rgba(47, 158, 102, 0.13);
+}
+
+.status-error .status-dot {
+  background: #d95555;
+  box-shadow: 0 0 0 5px rgba(217, 85, 85, 0.13);
+}
+
+.roadmap-card {
+  background: #183d2c;
+  border-radius: 1.75rem;
+  box-shadow: 0 2rem 5rem rgba(30, 68, 50, 0.2);
+  color: white;
+  padding: clamp(1.7rem, 4vw, 3rem);
+  transform: rotate(1.5deg);
+}
+
+.roadmap-card .card-kicker {
+  color: #9ed8ba;
+}
+
+.roadmap-card h2 {
+  font-size: clamp(1.8rem, 3vw, 2.6rem);
+  letter-spacing: -0.04em;
+  margin: 0.65rem 0 2rem;
+}
+
+.roadmap-card ol {
+  display: grid;
+  gap: 0.4rem;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.roadmap-card li {
+  align-items: center;
+  border-radius: 0.85rem;
+  color: #b9cabe;
+  display: flex;
+  gap: 1rem;
+  padding: 0.9rem;
+}
+
+.roadmap-card li span {
+  color: #79ad90;
+  font-size: 0.75rem;
+  font-weight: 800;
+}
+
+.roadmap-card li.active {
+  background: rgba(255, 255, 255, 0.1);
+  color: white;
+}
+
+@media (max-width: 760px) {
+  .app-shell {
+    padding: 0 1.25rem;
+  }
+
+  .hero {
+    grid-template-columns: 1fr;
+    padding-top: 4rem;
+  }
+
+  .roadmap-card {
+    transform: none;
+  }
+}
