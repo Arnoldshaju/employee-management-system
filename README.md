@@ -119,3 +119,8 @@ Send access tokens on protected requests using the HTTP header:
 ```text
 Authorization: Bearer <access-token>
 ```
+
+The React frontend provides `/login`, `/register`, and a protected `/dashboard`.
+It stores JWTs in browser session storage, restores the current user after page
+refreshes, rotates expired access tokens, and invalidates refresh tokens during
+logout. Public registration can only create Employee accounts.
