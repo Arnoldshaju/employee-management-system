@@ -4,6 +4,7 @@
 # Python / Django
 __pycache__/
 *.py[cod]
+.env
 backend/.venv/
 backend/db.sqlite3
 backend/media/
